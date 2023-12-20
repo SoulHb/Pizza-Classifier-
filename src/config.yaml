@@ -1,0 +1,9 @@
+saved_model_folder: './saved_models'
+data_path: './pizza_not_pizza'
+model_file: 'model.pth'
+model_url: 'https://drive.google.com/uc?export=download&id=17PqnC_bzDBSgL3F_PNL2kba3WVl2tP6q'
+lr: 0.001
+batch_size: 64
+number_of_epochs: 10
+image_height: 224
+image_width: 224
