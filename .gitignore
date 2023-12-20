@@ -1,6 +1,3 @@
-src/pizza_not_pizza
+pizza_dataset
 __pycache__
-src/saved_models
-.idea
-./mlruns
-src/mlruns
+vgg.pth
