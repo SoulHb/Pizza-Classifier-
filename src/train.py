@@ -16,6 +16,18 @@ np.random.seed(0)
 
 # create train loop and test loop
 def train_loop(model, optimizer, criterion, train_loader):
+    """
+        Training loop for a neural network.
+
+        Args:
+            model (torch.nn.Module): The neural network model.
+            optimizer (torch.optim.Optimizer): The optimizer.
+            criterion (torch.nn.Module): The loss function.
+            train_loader (torch.utils.data.DataLoader): DataLoader for the training dataset.
+
+        Returns:
+            tuple: Tuple containing the total loss, number of correct predictions, and total samples processed.
+        """
     model.train()
     total_loss = 0.0
     correct_predictions = 0.0
@@ -49,6 +61,17 @@ def train_loop(model, optimizer, criterion, train_loader):
     print(f"Train --> Loss/epoch: {average_loss}, Accuracy/epoch: {accuracy}%")
     return average_loss, accuracy
 def val_loop(model, criterion, val_loader):
+    """
+        Validation loop for a neural network.
+
+        Args:
+            model (torch.nn.Module): The neural network model.
+            criterion (torch.nn.Module): The loss function.
+            val_loader (torch.utils.data.DataLoader): DataLoader for the validation dataset.
+
+        Returns:
+            tuple: Tuple containing the total loss, number of correct predictions, and total samples processed.
+        """
     model.eval()
     total_loss = 0.0
     correct_predictions = 0.0
@@ -78,6 +101,17 @@ def val_loop(model, criterion, val_loader):
     print(f"Validation --> Loss/epoch: {average_loss}, Accuracy/epoch: {accuracy}%")
     return average_loss, accuracy
 def main(args):
+    """
+        Main function for training a neural network on a custom dataset.
+
+        Args:
+            args (dict): Dictionary containing command-line arguments or default values.
+                Possible keys: 'data_path', 'saved_model_path', 'image_height', 'image_width',
+                               'epoch', 'lr', 'batch_size'.
+
+        Returns:
+            None
+        """
     dataset_path = args["data_path"] if args["data_path"] else DATA_PATH
     save_model_path = args["saved_model_path"] if args["saved_model_path"] else SAVED_MODEL_FOLDER
 
