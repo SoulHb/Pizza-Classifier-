@@ -1,6 +1,5 @@
-src/pizza_not_pizza
-__pycache__
-src/saved_models
 .idea
-./mlruns
-src/mlruns
+src/pizza_not_pizza
+src/__pycache__
+src/saved_models
+__pycache__
