@@ -42,9 +42,13 @@ Move to src folder
 ```bash
 cd src
 ```
+Run Mlflow for checking metrics:
+```bash
+mlflow server --host 127.0.0.1 --port 8080
+```
 Run train.py
 ```bash
-python your_script.py \
+python train.py \
     --data_path /path/to/your/dataset \
     --saved_model_path /path/to/save/models \
     --epoch 10 \
