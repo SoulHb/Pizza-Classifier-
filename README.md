@@ -56,7 +56,7 @@ python your_script.py \
 
 ## Inference
 To use the trained model for dishes classification , follow the instructions below:
-
+### Without docker
 Move to src folder
 ```bash
 cd src
@@ -75,6 +75,11 @@ Open streamlit ui in browser
 ```bash
 streamlit run /your_path/Pizza-Classifier-/src/ui.py
 ```
+### With docker:
 
+Run docker-compose
+ ```bash
+docker-compose -f docker-compose.yml up
+```
 ## Author
 This Pizza Classifier project was developed by Namchuk Maksym. If you have any questions, please contact with me: namchuk.maksym@gmail.com
